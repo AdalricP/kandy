@@ -1,0 +1,6 @@
+{
+    "sender_email": "YOUR_GMAIL_ADDRESS@gmail.com",
+    "sender_password": "YOUR_APP_SPECIFIC_PASSWORD",
+    "kindle_email": "YOUR_KINDLE_EMAIL@kindle.com",
+    "downloads_path": "/Users/aryan/Downloads/arxiv-papers"
+}

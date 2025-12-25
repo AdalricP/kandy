@@ -1,0 +1,52 @@
+{
+    "manifest_version": 3,
+    "name": "ArXiv Auto PDF Downloader",
+    "version": "2.0",
+    "description": "Automatically downloads ArXiv PDFs and emails them to Kindle.",
+    "icons": {
+        "128": "icon.png"
+    },
+    "permissions": [
+        "downloads",
+        "tabs",
+        "storage",
+        "nativeMessaging",
+        "notifications"
+    ],
+    "host_permissions": [
+        "*://arxiv.org/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "*://arxiv.org/*"
+            ],
+            "js": [
+                "content.js"
+            ],
+            "css": [
+                "content.css"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "options_ui": {
+        "page": "options.html",
+        "open_in_tab": false
+    },
+    "action": {
+        "default_popup": "options.html"
+    },
+    "commands": {
+        "download_pdf": {
+            "suggested_key": {
+                "default": "MacCtrl+Shift+D",
+                "mac": "MacCtrl+Shift+D",
+                "windows": "Ctrl+Shift+D"
+            },
+            "description": "Download ArXiv PDF"
+        }
+    }
+}
